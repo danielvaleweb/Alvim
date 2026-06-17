@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: venis2.ggsk
-// Generated 2026-06-17T14:10:05
+// Generated 2026-06-17T14:37:02
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -39,16 +39,16 @@ function pano2vrSkin(player,base) {
 	player.addVariable('vis_phone_vimeo', 2, false, { ignoreInState: 0  });
 	player.addVariable('vis_phone_video_file', 2, false, { ignoreInState: 0  });
 	player.addVariable('vis_phone_video_url', 2, false, { ignoreInState: 0  });
-	player.addVariable('opt_controller', 2, true, { ignoreInState: 1  });
-	player.addVariable('opt_prev_next', 2, false, { ignoreInState: 1  });
-	player.addVariable('opt_info', 2, false, { ignoreInState: 1  });
+	player.addVariable('opt_controller', 2, false, { ignoreInState: 1  });
+	player.addVariable('opt_prev_next', 2, true, { ignoreInState: 1  });
+	player.addVariable('opt_info', 2, true, { ignoreInState: 1  });
 	player.addVariable('opt_fullscreen', 2, true, { ignoreInState: 1  });
-	player.addVariable('opt_gyro', 2, false, { ignoreInState: 1  });
+	player.addVariable('opt_gyro', 2, true, { ignoreInState: 1  });
 	player.addVariable('opt_maps', 2, false, { ignoreInState: 1  });
 	player.addVariable('opt_floorplans', 2, false, { ignoreInState: 1  });
-	player.addVariable('opt_share_facebook', 2, false, { ignoreInState: 1  });
-	player.addVariable('opt_share_twitter', 2, false, { ignoreInState: 1  });
-	player.addVariable('opt_share_copy', 2, false, { ignoreInState: 1  });
+	player.addVariable('opt_share_facebook', 2, true, { ignoreInState: 1  });
+	player.addVariable('opt_share_twitter', 2, true, { ignoreInState: 1  });
+	player.addVariable('opt_share_copy', 2, true, { ignoreInState: 1  });
 	player.addVariable('opt_share', 2, false, { ignoreInState: 1  });
 	player.addVariable('opt_url_popup', 2, true, { ignoreInState: 1  });
 	player.addVariable('width_controls_left', 1, 0, { ignoreInState: 0  });
@@ -19087,10 +19087,10 @@ alert("The current view has been copied.");
 					((player.getVariableValue('resp_phone') == false))
 				)
 			) {
-				let pdfInterval_97 = setInterval(() => {
+				let pdfInterval_99 = setInterval(() => {
 					if (skin._pdf_hs_popup_pdf__pdf.contentWindow.PDFViewerApplication && skin._pdf_hs_popup_pdf__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_hs_popup_pdf__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_hs_popup_pdf__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_hs_popup_pdf.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_97);
+						clearInterval(pdfInterval_99);
 					}
 				}, 50);
 			}
@@ -19215,10 +19215,10 @@ alert("The current view has been copied.");
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				let pdfInterval_98 = setInterval(() => {
+				let pdfInterval_100 = setInterval(() => {
 					if (skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup_phone.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_98);
+						clearInterval(pdfInterval_100);
 					}
 				}, 50);
 			}
